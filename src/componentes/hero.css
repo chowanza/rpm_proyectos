@@ -1,0 +1,47 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('./img/hero.jpg'); /* Asegúrate de ajustar el path de la imagen */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); /* Forma triangular */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+.hero-button {
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.hero-button:hover {
+  background-color: #ff9800;
+}
+
+
+
+/* Crane */
+.crane {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 80px;
+  z-index: 3; /* Para que aparezca encima del recorte */
+}
