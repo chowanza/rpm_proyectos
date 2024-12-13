@@ -5,24 +5,15 @@ import Nosotros from './componentes/Nosotros';
 import Obras from './componentes/Obras';
 import Clientes from './componentes/Clientes';
 import Contacto from './componentes/Contacto';
-import logo from './componentes/img/logo.png';
+import Header from './componentes/Header';
 import craneImage from './componentes/img/crane.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <img src={logo} alt="Logo de RPM PROYECTOS" />
-        <nav>
-          <a href="#home">Inicio</a>
-          <a href="#nosotros">Nosotros</a>
-          <a href="#obras">Obras</a>
-          <a href="#clientes">Clientes</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </header>
-
+      {/*Header en la parte superior*/}
+      <Header />
       {/* Barra de progreso en el lado izquierdo */}
       <div className="progress-bar">
         <div className="progress" id="progress"></div>
