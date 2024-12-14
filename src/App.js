@@ -4,7 +4,7 @@ import Home from './componentes/Home';
 import Nosotros from './componentes/Nosotros';
 import Obras from './componentes/Obras';
 import Clientes from './componentes/Clientes';
-import Contacto from './componentes/Contacto';
+import Footer from './componentes/Footer';
 import Header from './componentes/Header';
 import craneImage from './componentes/img/crane.png';
 import './App.css';
@@ -45,7 +45,7 @@ function App() {
               <Clientes />
             </div>
             <div className="section" id="contacto">
-              <Contacto />
+              <Footer />
             </div>
           </ReactFullpage.Wrapper>
         )}
