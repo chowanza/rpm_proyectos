@@ -41,9 +41,9 @@ const Footer = () => {
         <div className="info-block">
           <h3>HORARIO COMERCIAL</h3>
           <p>
-            <b>Lunes a viernes:</b><br />
+            Lunes a viernes:<br />
             09:00 h - 18:00 h<br />
-            <b>Sábado:</b><br />
+            Sábado:<br />
             09:00 h a 12:00 h
           </p>
         </div>
