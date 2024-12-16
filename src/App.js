@@ -57,11 +57,11 @@ function App() {
       </button>
 
       {/* Íconos de redes sociales */}
-      <div className="social-media">
+      {/*<div className="social-media">
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
         <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
-      </div>
+      </div>*/}
     </div>
   );
 }
