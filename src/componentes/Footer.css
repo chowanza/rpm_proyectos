@@ -23,8 +23,8 @@
   margin-top: 80px;
   width: 180px;
   margin-bottom: 40px;
-  display: block;
   margin-left: 0;
+  display: flex;
 }
 
 form {
@@ -50,6 +50,14 @@ textarea {
   border-radius: 5px;
   color: #333;
   font-size: 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Glancyr', sans-serif; /* Cambia 'Glancyr' por la fuente que prefieras */
+  font-size: 14px; /* Ajusta el tamaño de la fuente */
+  color: #ccc; /* Opcional: Cambia el color del placeholder */
+  font-weight: normal; /* Opcional: Ajusta el grosor de la fuente */
 }
 
 textarea {
@@ -256,8 +264,8 @@ button:hover {
 }
 
 @font-face {
-  font-family: 'Glacyr';
-  src: url('../assets/fonts/glancyr-glancyr-regular-400.ttf') format('truetype');
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/GLANCYR-LIGHT.OTF') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
