@@ -1,42 +1,68 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
+import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import logo from './img/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
+    <div className="container">
+      {/* Formulario */}
+      <div className="form-section">
+        <img src={logo} alt="Logo" className="logo" />
+        <form>
+          <label htmlFor="nombre">NOMBRE</label>
+          <input type="text" id="nombre" placeholder="NOMBRE" required />
+
+          <label htmlFor="email">TU EMAIL</label>
+          <input type="email" id="email" placeholder="TU EMAIL" required />
+
+          <label htmlFor="asunto">ASUNTO</label>
+          <input type="text" id="asunto" placeholder="ASUNTO" required />
+
+          <label htmlFor="mensaje">TU MENSAJE</label>
+          <textarea id="mensaje" rows="5" placeholder="TU MENSAJE"></textarea>
+
+          <button type="submit">
+            ENVIAR <span>➤</span>
+          </button>
+        </form>
+      </div>
+
+      {/* Información */}
+      <div className="info-section">
+        <div className="info-block">
           <h3>ÚNETENOS</h3>
-          <div className="content-box">
-            <p>Calle Cualquiera, 123. <br /> 12345 Cualquier Ciudad</p>
-            <p>hola@unsitioegenial.es</p>
-          </div>
+          <p>
+            Calle Cualquiera, 123.<br />
+            12345 Cualquier Ciudad<br />
+            hola@unsitiogenial.es
+          </p>
         </div>
-        <div className="footer-section">
+        <div className="info-block">
           <h3>HORARIO COMERCIAL</h3>
-          <div className="content-box">
-            <p><b>Lunes a viernes:</b> <br></br> 09:00 h - 18:00 h</p>
-            <p><b>Sábado:</b> <br></br> 09:00 h - 12:00 h</p>
-          </div>
+          <p>
+            <b>Lunes a viernes:</b><br />
+            09:00 h - 18:00 h<br />
+            <b>Sábado:</b><br />
+            09:00 h a 12:00 h
+          </p>
         </div>
-        <div className="footer-section">
+        <div className="info-block">
           <h3>SÍGUENOS</h3>
-          <div className="content-box">
-            <div className="social-icons">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook"></i>
-              </a>
-            </div>
+          <div className="social-icons">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

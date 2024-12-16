@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logoHeader" />
       <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
         <a href="#home">Inicio</a>
         <a href="#nosotros">Nosotros</a>
