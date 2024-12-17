@@ -52,9 +52,10 @@ function App() {
       />
 
       {/* Botón de volver arriba */}
-      <button className="scroll-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+      {/*<button className="scroll-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         ↑
-      </button>
+      </button> 
+      */}
 
       {/* Íconos de redes sociales */}
       {/*<div className="social-media">

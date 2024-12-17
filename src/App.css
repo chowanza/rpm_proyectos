@@ -51,6 +51,11 @@ section {
   padding: 120px 20px;
   height: 100vh;
   color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+section:hover {
+  background-color: #121212; /* Cambia ligeramente el color de fondo al pasar el cursor */
 }
 
 #home, #nosotros, #obras, #clientes, #contacto {
