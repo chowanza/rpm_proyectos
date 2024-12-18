@@ -57,8 +57,9 @@ body, html {
 
 /* Secciones de la página */
 section {
-  padding: 120px 20px;
+  padding-top: 60px;
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
