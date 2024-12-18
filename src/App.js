@@ -17,16 +17,16 @@ function App() {
       <section id="diseno" className="section">
         <Home />
       </section>
-      <section id="calculo" className="section">
+      <section id="Nosotros" className="section">
         <Nosotros />
       </section>
-      <section id="contacto" className="section">
+      <section id="Obras" className="section">
         <Obras />
       </section>
-      <section id="clientes" className="section">
+      <section id="Clientes" className="section">
         <Clientes />
       </section>
-      <section id="footer" className="section">
+      <section id="Contacto" className="section">
         <Footer />
       </section>
     </div>

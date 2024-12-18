@@ -34,10 +34,39 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  // Función para manejar el scroll hasta el final solo en desktop
+  const handleContactClick = (e) => {
+    // Verificar si es dispositivo móvil (ancho menor a 768px)
+    const isMobile = window.innerWidth <= 768;
+    
+    if (!isMobile) {
+      e.preventDefault();
+      
+      // Calculamos la altura total del documento
+      const documentHeight = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      );
+      
+      // Hacemos scroll suave hasta el final solo en desktop
+      window.scrollTo({
+        top: documentHeight,
+        behavior: 'smooth'
+      });
+    }
+    
+    // En móvil, dejamos que el comportamiento sea normal (no prevenimos el evento)
+    closeMenu();
+  };
+
   const menuItems = [
-    { href: '#diseno', label: 'Diseño' },
-    { href: '#calculo', label: 'Cálculo y ejecución' },
-    { href: '#contacto', label: 'Arquitectura' }
+    { href: '#Nosotros', label: 'Nosotros' },
+    { href: '#Obras', label: 'Obras' },
+    { href: '#Clientes', label: 'Clientes' },
+    { href: '#Contacto', label: 'Contacto', onClick: handleContactClick }
   ];
 
   return (
@@ -55,6 +84,7 @@ const Header = () => {
               key={item.href} 
               href={item.href} 
               className="nav-link"
+              onClick={item.onClick || undefined}
             >
               <span className="nav-text">{item.label}</span>
             </a>
@@ -72,6 +102,7 @@ const Header = () => {
             <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
             <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
             <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
+            <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
           </div>
         </button>
       </div>
@@ -84,7 +115,7 @@ const Header = () => {
               key={item.href} 
               href={item.href} 
               className="mobile-nav-link"
-              onClick={closeMenu}
+              onClick={item.onClick || closeMenu}
             >
               {item.label}
             </a>
