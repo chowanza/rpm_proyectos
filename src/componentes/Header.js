@@ -37,7 +37,7 @@ const Header = () => {
   const menuItems = [
     { href: '#diseno', label: 'Diseño' },
     { href: '#calculo', label: 'Cálculo y ejecución' },
-    { href: '#arquitectura', label: 'Arquitectura' }
+    { href: '#contacto', label: 'Arquitectura' }
   ];
 
   return (
