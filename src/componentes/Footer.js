@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="container">
       {/* Formulario */}
       <div className="form-section">
-        <img src={logo} alt="Logo" className="logo" />
+        {/*<img src={logo} alt="Logo" className="logoFooter" />*/}
         <form>
           <label htmlFor="nombre">NOMBRE</label>
           <input type="text" id="nombre" placeholder="NOMBRE" required />
