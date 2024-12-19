@@ -1,0 +1,77 @@
+/* Estilos específicos para Nosotros */
+.nosotros-section {
+    background: linear-gradient(to bottom, #1f1f1f,#000000 );
+    padding: 80px 20px; /* Espaciado interno */
+    margin: 0; /* Eliminar márgenes externos */
+    box-sizing: border-box;
+  }
+  
+  .nosotros-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nosotros-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .nosotros-block .nosotros-image {
+    flex: 1;
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .nosotros-block .nosotros-text {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+  }
+  
+  .nosotros-block .nosotros-text h3 {
+    font-size: 2rem;
+    color: #F0C929;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .nosotros-block .nosotros-text h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #F0C929;
+    margin-top: 5px;
+  }
+  
+  .nosotros-block .nosotros-text p {
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    margin: 0;
+  }
+  
+  /* Ajuste para eliminar líneas negras entre secciones */
+  .nosotros-section {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  
+  .nosotros-section + section {
+    margin: 0; /* Elimina espacio entre la siguiente sección */
+    padding-top: 0;
+  }
+  
+  body {
+    margin: 0;
+  }
+  

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './componentes/Header';
-import Home from './componentes/Home';
-import Nosotros from './componentes/Nosotros';
+import Hero from './componentes/Hero';
+import SliderVideo from './componentes/SliderVideo';
+import Nosotros from './componentes/Nosotros'; // Importa el componente Nosotros
 import Obras from './componentes/Obras';
 import Clientes from './componentes/Clientes';
 import Footer from './componentes/Footer';
@@ -15,18 +16,26 @@ function App() {
 
       {/* Secciones conectadas por el Header */}
       <section id="diseno" className="section">
-        <Home />
+        <Hero />
       </section>
+
+      <section id="galeria" className="section">
+        <SliderVideo />
+      </section>
+
       <section id="Nosotros" className="section">
         <Nosotros />
       </section>
+
       <section id="Obras" className="section">
         <Obras />
       </section>
+
       <section id="Clientes" className="section">
         <Clientes />
       </section>
-      <section id="Contacto" className="section">
+
+      <section id="footer" className="section">
         <Footer />
       </section>
     </div>
