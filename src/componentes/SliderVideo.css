@@ -1,4 +1,35 @@
-/* Slider de Videos */
+/* Estilos globales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white; /* Texto blanco global */
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Secciones de la página */
+section {
+  margin: 0; /* Eliminar márgenes superiores e inferiores */
+  padding: 0; /* Sin relleno extra */
+  height: 100vh; /* Asegura que ocupen toda la altura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  scroll-snap-align: start;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* Previene desbordamientos */
+}
+
+/* Ajustes para el Slider de Videos */
 .slider-video-section {
   height: 100vh; /* Ocupa toda la altura de la ventana */
   display: flex;
@@ -7,24 +38,29 @@
   background-color: black; /* Fondo negro */
   margin: 0;
   padding: 0;
+  scroll-snap-align: start; /* Ajuste al inicio de la vista */
+  overflow: hidden; /* Previene desbordes */
 }
 
 .video-slider-container {
   position: relative;
   width: 100%;
-  height: 100%; /* Videos ocupan toda la altura */
+  height: 100%; /* Ocupa toda la altura */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-slide {
   display: none;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que el video se ajuste al contenedor */
+  object-fit: cover; /* Ajuste del video */
 }
 
 .video-slide.active {
-  display: block;
+  display: block; /* Solo muestra el video activo */
 }
 
 .slider-video-buttons {
@@ -50,4 +86,15 @@
 
 .slider-video-button:hover {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .slider-video-buttons {
+    display: none; /* Oculta botones en pantallas pequeñas */
+  }
+
+  .video-slide {
+    object-fit: contain; /* Asegura que el video se vea completo */
+  }
 }

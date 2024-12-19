@@ -1,14 +1,19 @@
-/* Hero Section */
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   color: white;
   overflow: hidden;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-overlay {
@@ -17,74 +22,81 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Oscurecimiento del fondo */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Reducir padding para evitar desbordamientos */
+  padding: 20px;
   box-sizing: border-box;
 }
 
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 40px;
+}
+
 .hero-content {
-  max-width: 90%; /* Limita el ancho máximo al 90% del contenedor */
-  z-index: 10;
-  text-align: center; /* Centrar el contenido */
-  overflow-wrap: break-word; /* Evita que el texto se salga */
+  text-align: center;
+  max-width: 800px;
 }
 
 .hero-content h1 {
-  font-size: 3rem; /* Tamaño ajustado */
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
-  word-wrap: break-word; /* Forzar ajuste de palabras largas */
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.hero-content h1 .highlight {
-  color: #ffc107; /* Color amarillo destacado */
-  display: inline-block; /* Cambia el bloque a inline-block */
-  margin-top: 10px; /* Espacio entre el bloque superior e inferior */
+.hero-content .highlight {
+  color: #ffc107;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
-  margin: 20px 0 30px; /* Margen superior e inferior ajustado */
+  margin-bottom: 2rem;
   color: #e0e0e0;
-  text-align: center; /* Centrar subtítulo */
 }
 
 .hero-buttons {
   display: flex;
-  flex-direction: column; /* Botones alineados verticalmente */
-  align-items: center; /* Centrar los botones */
-  gap: 15px; /* Espacio controlado entre botones */
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .btn {
-  padding: 10px 20px; /* Botón más compacto */
-  font-size: 1rem; /* Tamaño de fuente ajustado */
+  padding: 12px 24px;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  border-radius: 5px; /* Bordes ligeramente redondeados */
-  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
-  width: 200px; /* Tamaño uniforme para los botones */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 250px;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Añade una sombra suave */
 }
 
 .btn-primary {
   background-color: #ffc107;
   color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #e0a806; /* Un amarillo más oscuro en hover */
-  transform: translateY(-2px); /* Movimiento más sutil */
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más intensa en hover */
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
@@ -94,14 +106,48 @@
 }
 
 .btn-secondary:hover {
-  background-color: #ffc107; /* Cambia el fondo a amarillo */
-  color: black; /* Cambia el texto a negro */
+  background-color: #ffc107;
+  color: black;
+}
+
+.hero-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image img {
-  max-height: 300px; /* Limitar altura de la imagen */
+  max-width: 100%;
+  max-height: 300px;
   object-fit: contain;
-  z-index: 10;
-  position: relative;
-  margin-top: 20px; /* Añadir margen para evitar contacto con otros elementos */
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .hero-image {
+    display: none; /* Ocultar la imagen en pantallas pequeñas */
+  }
+
+  .hero-content {
+    margin-top: 4rem; /* Agregar margen superior para pantallas pequeñas */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container {
+    flex-direction: row; /* Mantener disposición horizontal en pantallas grandes */
+    gap: 4rem;
+    padding: 0 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin-left: 7rem;
+    margin-top: 4rem;
+  }
+
+  .hero-image {
+    display: flex; /* Asegurar que la imagen sea visible en pantallas grandes */
+    margin-right: 2rem; /* Agregar margen derecho para pantallas grandes */
+  }
 }
