@@ -1,47 +1,107 @@
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('./img/hero.jpg'); /* Asegúrate de ajustar el path de la imagen */
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); /* Forma triangular */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  
-.hero-button {
-  background-color: #ffc107;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Oscurecimiento del fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Reducir padding para evitar desbordamientos */
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 90%; /* Limita el ancho máximo al 90% del contenedor */
+  z-index: 10;
+  text-align: center; /* Centrar el contenido */
+  overflow-wrap: break-word; /* Evita que el texto se salga */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Tamaño ajustado */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
+  word-wrap: break-word; /* Forzar ajuste de palabras largas */
+}
+
+.hero-content h1 .highlight {
+  color: #ffc107; /* Color amarillo destacado */
+  display: inline-block; /* Cambia el bloque a inline-block */
+  margin-top: 10px; /* Espacio entre el bloque superior e inferior */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 20px 0 30px; /* Margen superior e inferior ajustado */
+  color: #e0e0e0;
+  text-align: center; /* Centrar subtítulo */
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column; /* Botones alineados verticalmente */
+  align-items: center; /* Centrar los botones */
+  gap: 15px; /* Espacio controlado entre botones */
   margin-top: 20px;
 }
 
-.hero-button:hover {
-  background-color: #ff9800;
+.btn {
+  padding: 10px 20px; /* Botón más compacto */
+  font-size: 1rem; /* Tamaño de fuente ajustado */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  width: 200px; /* Tamaño uniforme para los botones */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Añade una sombra suave */
 }
 
+.btn-primary {
+  background-color: #ffc107;
+  color: black;
+}
 
+.btn-primary:hover {
+  background-color: #e0a806; /* Un amarillo más oscuro en hover */
+  transform: translateY(-2px); /* Movimiento más sutil */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más intensa en hover */
+}
 
-/* Crane */
-.crane {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  width: 80px;
-  z-index: 3; /* Para que aparezca encima del recorte */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107; /* Cambia el fondo a amarillo */
+  color: black; /* Cambia el texto a negro */
+}
+
+.hero-image img {
+  max-height: 300px; /* Limitar altura de la imagen */
+  object-fit: contain;
+  z-index: 10;
+  position: relative;
+  margin-top: 20px; /* Añadir margen para evitar contacto con otros elementos */
 }
