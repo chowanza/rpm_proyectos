@@ -24,22 +24,24 @@ const SliderVideo = () => {
             key={index}
             className={`video-slide ${index === currentVideo ? 'active' : ''}`}
             src={video}
-            autoPlay
+            autoPlay={index === currentVideo}
             loop
             muted
+            playsInline
           />
         ))}
         <div className="slider-video-buttons">
           <button className="slider-video-button left" onClick={prevSlide}>
-            {'<'}
+            &#8249;
           </button>
           <button className="slider-video-button right" onClick={nextSlide}>
-            {'>'}
+            &#8250;
           </button>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default SliderVideo;
