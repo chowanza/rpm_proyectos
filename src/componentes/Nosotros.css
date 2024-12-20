@@ -1,20 +1,20 @@
 /* Estilos específicos para Nosotros */
 .nosotros-section {
   background: linear-gradient(to bottom, #1f1f1f, #000000);
-  height: 100vh; /* Ajustar al alto total de la ventana */
+  min-height: 100vh; /* Ajustar al alto total de la ventana */
   display: flex;
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
-  padding: 10px 200px; /* Espaciado interno */
+  padding: 10px 20px; /* Espaciado interno ajustado */
   box-sizing: border-box;
-  overflow: hidden; /* Prevenir desbordamientos */
+  overflow: auto; /* Permitir desplazamiento */
 }
 
 .nosotros-container {
   display: flex;
   flex-direction: column;
-  gap: px;
+  gap: 30px; /* Espaciado entre bloques */
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -24,21 +24,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .nosotros-block .nosotros-image {
   flex: 1;
-  max-width: 45%;
+  max-width: 30%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .nosotros-block .nosotros-text {
   flex: 1;
   max-width: 45%;
   text-align: left;
+  margin-left: 30px;
   font-size: 1.2rem;
   line-height: 1.8;
   color: #e0e0e0;
@@ -88,7 +89,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .nosotros-section {
     padding: 60px 15px;
   }
@@ -99,6 +100,10 @@
 
   .nosotros-block .nosotros-text h3 {
     font-size: 1.6rem;
+  }
+
+  .nosotros-block .nosotros-image {
+    display: none; /* Ocultar imágenes en pantallas pequeñas */
   }
 }
 
@@ -113,5 +118,9 @@
 
   .nosotros-block .nosotros-text h3 {
     font-size: 1.4rem;
+  }
+
+  .nosotros-block .nosotros-image {
+    display: none; /* Ocultar imágenes en pantallas muy pequeñas */
   }
 }
