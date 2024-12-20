@@ -43,5 +43,4 @@ const SliderVideo = () => {
   );
 };
 
-
 export default SliderVideo;
