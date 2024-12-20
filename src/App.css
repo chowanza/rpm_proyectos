@@ -11,6 +11,7 @@ body, html {
 
 .App {
   text-align: center;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
 /* Section Styling */
@@ -28,34 +29,8 @@ body, html {
   overflow: hidden;
 }
 
-/* Scroll Snap */
-body {
-  scroll-snap-type: y mandatory;
-}
-
-/* Specific Sections */
-#diseno {
-  background: linear-gradient(to bottom, #000000, #333333);
-}
-
-#galeria {
+#diseno, #galeria, #Nosotros, #Obras, #Clientes, #footer {
   background: linear-gradient(to bottom, #1f1f1f, #3a3a3a);
-}
-
-#Nosotros {
-  background: linear-gradient(to bottom, #000000, #1f1f1f);
-}
-
-#Obras {
-  background: linear-gradient(to bottom, #1f1f1f, #333333);
-}
-
-#Clientes {
-  background: linear-gradient(to bottom, #1c1c1c, #333333);
-}
-
-#footer {
-  background: linear-gradient(to bottom, #121212, #3a3a3a);
 }
 
 /* Responsiveness */
