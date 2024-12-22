@@ -22,23 +22,6 @@
   display: block;
 }
 
-/* Estilo para dispositivos móviles */
-@media (max-width: 768px) {
-  .video-slide {
-    /* Hacemos zoom al video sin rotarlo */
-    object-fit: cover; /* Mantiene el video cubriendo todo el contenedor */
-    transform: scale(1.2); /* Aplica un zoom suave */
-    height: 100%;  /* Asegura que el video ocupe toda la altura */
-    width: 100%;   /* Asegura que el video ocupe todo el ancho */
-  }
-  
-  /* Asegúrate de que el contenedor de video ocupe el 100% de la pantalla */
-  .video-slider-container {
-    height: 100vh;  /* Ocupa toda la altura de la ventana */
-    width: 100%;    /* Mantiene el contenedor con el ancho completo */
-  }
-}
-
 /* Estilo de los botones superpuestos */
 .slider-video-buttons {
   position: absolute;
@@ -53,26 +36,72 @@
 }
 
 .slider-video-button {
-  background-color: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+  background-color: rgba(255, 255, 255, 0.3);
   border: none;
   color: white;
-  padding: 15px;
+  padding: 10px;
   cursor: pointer;
-  font-size: 2rem;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  border-radius: 50%; /* Asegura que los botones sean círculos */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .slider-video-button:hover {
-  background-color: rgba(255, 255, 255, 0.6); /* Fondo más visible cuando se pasa el cursor */
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Estilo para el botón izquierdo (izquierda) */
+/* Estilo para dispositivos móviles */
+@media (max-width: 920px) {
+  .video-slide {
+    object-fit: cover; /* Mantiene el video cubriendo todo el contenedor */
+    transform: scale(1.2); /* Aplica un zoom suave */
+    height: 100%;  /* Asegura que el video ocupe toda la altura */
+    width: 100%;   /* Asegura que el video ocupe todo el ancho */
+  }
+
+  .video-slider-container {
+    height: 100vh;  /* Ocupa toda la altura de la ventana */
+    width: 100%;    /* Mantiene el contenedor con el ancho completo */
+  }
+
+  .slider-video-button {
+    padding: 8px; /* Reducir el tamaño del botón para pantallas medianas */
+    font-size: 1.2rem; /* Reducir el tamaño del ícono o texto */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Alto del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-slider-container {
+    height: 100vh;  /* Ocupa toda la altura de la ventana */
+    width: 100%;    /* Mantiene el contenedor con el ancho completo */
+  }
+
+  .video-slide {
+    object-fit: cover; /* Mantiene el video cubriendo todo el contenedor */
+    transform: scale(1.2); /* Aplica un zoom suave */
+    height: 100%;  /* Asegura que el video ocupe toda la altura */
+    width: 100%;   /* Asegura que el video ocupe todo el ancho */
+  }
+
+  .slider-video-button {
+    padding: 5px; /* Botones más pequeños */
+    font-size: 1rem; /* Ícono o texto más pequeño */
+    width: 25px; /* Ancho del botón */
+    height: 25px; /* Alto del botón */
+  }
+}
+
+/* Ajuste adicional para posicionar los botones a los lados */
 .slider-video-button.left {
-  /* Puedes agregar estilos específicos si lo deseas */
+  position: absolute;
+  left: 10px; /* Posicionar a la izquierda */
 }
 
-/* Estilo para el botón derecho (derecha) */
 .slider-video-button.right {
-  /* Puedes agregar estilos específicos si lo deseas */
+  position: absolute;
+  right: 10px; /* Posicionar a la derecha */
 }
