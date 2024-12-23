@@ -43,9 +43,11 @@
   font-size: 1.2rem;
   line-height: 1.8;
   color: #e0e0e0;
+  font-family: 'Glancyr', sans-serif;
 }
 
 .nosotros-block .nosotros-text h3 {
+  font-family: 'AkiraExpanded', sans-serif;
   font-size: 2rem;
   color: #F0C929;
   margin-bottom: 15px;
@@ -89,7 +91,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .nosotros-section {
     padding: 60px 15px;
   }
@@ -123,4 +125,18 @@
   .nosotros-block .nosotros-image {
     display: none; /* Ocultar imágenes en pantallas muy pequeñas */
   }
+}
+
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url('../assets/fonts/AkiraExpanded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/GLANCYR-LIGHT.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
