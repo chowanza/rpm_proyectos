@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './componentes/Header';
 import Hero from './componentes/Hero';
 import SliderVideo from './componentes/SliderVideo';
-import Nosotros from './componentes/Nosotros'; // Importa el componente Nosotros
+import Nosotros from './componentes/Nosotros';
 import Obras from './componentes/Obras';
 import Clientes from './componentes/Clientes';
 import Footer from './componentes/Footer';
@@ -35,7 +35,7 @@ function App() {
         <Clientes />
       </section>
 
-      <section id="footer" className="section">
+      <section id="Contacto" className="section">
         <Footer />
       </section>
     </div>

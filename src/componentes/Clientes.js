@@ -8,7 +8,7 @@ import backgroundImage from './img/construccion.jpeg';
 const testimonials = [
   {
     name: 'MARIA RODRIGUEZ',
-    text: 'RPM es una constructora integral que se destaca por su versatilidad y compromiso con la calidad en cada uno de sus proyectos.',
+    text: 'RPM es una constructora integral que se destaca por su compromiso con la calidad.',
     rating: 5,
   },
   {

@@ -53,7 +53,7 @@
 }
 
 /* Estilo para dispositivos móviles */
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .video-slide {
     object-fit: cover; /* Mantiene el video cubriendo todo el contenedor */
     transform: scale(1.2); /* Aplica un zoom suave */
