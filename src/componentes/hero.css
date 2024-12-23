@@ -42,12 +42,14 @@
 }
 
 .hero-content {
-  text-align: center;
+  font-family: Glancyr, sans-serif;
   max-width: 800px;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-family: AkiraExpanded, sans-serif;
+  text-align: left;
+  font-size: 31px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -55,9 +57,8 @@
 }
 
 .hero-content .highlight {
-  color: #ffc107;
+  color: #F0C929;
   display: inline-block;
-  margin-bottom: 0.5rem;
 }
 
 .hero-content p {
@@ -65,12 +66,13 @@
   line-height: 1.5;
   margin-bottom: 2rem;
   color: #e0e0e0;
+  text-align: left;
 }
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -88,7 +90,7 @@
 }
 
 .btn-primary {
-  background-color: #ffc107;
+  background-color: #F0C929;
   color: black;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -101,7 +103,7 @@
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #ffc107;
+  border: 2px solid #F0C929;
   color: #ffc107;
 }
 
@@ -131,6 +133,19 @@
   .hero-content {
     margin-top: 4rem; /* Agregar margen superior para pantallas pequeñas */
   }
+
+  .hero-content h1 {
+    text-align: center;
+  }
+
+  .hero-content p {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Cambiar disposición de botones a vertical en pantallas pequeñas */
+    gap: 1rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -150,4 +165,18 @@
     display: flex; /* Asegurar que la imagen sea visible en pantallas grandes */
     margin-right: 2rem; /* Agregar margen derecho para pantallas grandes */
   }
+}
+
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url('../assets/fonts/AkiraExpanded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/GLANCYR-LIGHT.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

@@ -16,8 +16,8 @@ const Hero = () => {
       <div className="hero-overlay">
         <div className="hero-content">
           <h1>
-            <span className="highlight">SERVICIOS DE PROYECTOS DE</span> <br />
-            INGENIERÍA Y ARQUITECTURA
+            <span className="highlight">SERVICIOS DE PROYECTOS DE <br />
+            INGENIERÍA Y ARQUITECTURA</span>
           </h1>
           <p>
             Es decir todo lo que es el proyecto. Levantamientos, planos arquitectónicos, de estructuras, 

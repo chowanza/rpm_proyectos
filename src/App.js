@@ -15,11 +15,11 @@ function App() {
       <Header />
 
       {/* Secciones conectadas por el Header */}
-      <section id="diseno" className="section">
+      <section id="Inicio" className="section">
         <Hero />
       </section>
 
-      <section id="galeria" className="section">
+      <section id="Galeria" className="section">
         <SliderVideo />
       </section>
 

@@ -63,6 +63,8 @@ const Header = () => {
   };
 
   const menuItems = [
+    { href: '#Inicio', label: 'Inicio' },
+    { href: '#Galeria', label: 'Galeria' },
     { href: '#Nosotros', label: 'Nosotros' },
     { href: '#Obras', label: 'Obras' },
     { href: '#Clientes', label: 'Clientes' },
