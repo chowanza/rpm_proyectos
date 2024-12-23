@@ -168,12 +168,6 @@ button:hover {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
-    min-height: auto;
-  }
 
   .form-section,
   .info-section {
@@ -181,30 +175,26 @@ button:hover {
     max-width: 600px;
     margin: 0 auto;
     padding: 0;
-    display: block; /* Asegura que los elementos sean visibles */
+    display: block;
+    
   }
 
   .info-section {
-    margin-top: 40px;
-    position: relative; /* Asegura que esté en el flujo normal del documento */
-    visibility: visible; /* Asegura que sea visible */
-    opacity: 1; /* Asegura que sea visible */
-    height: auto; /* Permite que crezca según su contenido */
-    overflow: visible; /* Permite que el contenido sea visible */
+    position: relative;
+    height: auto;
+    overflow: visible;
   }
 
   .social-icons {
-    justify-content: center;
+    justify-content: left;
     margin: 20px 0;
     display: flex;
-    visibility: visible;
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 30px 15px;
-  }
+
+@media (max-width: 858px) {
+
 
   .form-section,
   .info-section {
@@ -232,17 +222,15 @@ button:hover {
     width: 80px;
     height: 80px;
   }
-}
-
-@media (max-width: 768px) {
+  
   .container {
-    padding: 20px 10px;
+    padding: 100px 10px 10px 10px;
     gap: 20px;
     min-height: 100vh;
     height: auto;
     overflow-y: auto;
     display: flex; /* Añadido */
-    flex-direction: column; /* Para apilar elementos */
+    flex-direction: row; /* Para apilar elementos */
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
   }
@@ -256,6 +244,7 @@ button:hover {
   }
 
   .info-section {
+    margin-top: 20px;
     display: flex; /* Centra contenido dentro de la sección */
     flex-direction: column; /* Apila elementos verticalmente */
     justify-content: center; /* Centra verticalmente */
@@ -305,10 +294,6 @@ button:hover {
     font-size: 16px;
   }
 }
-
-
-
-
 
 @font-face {
   font-family: 'AkiraExpanded';
