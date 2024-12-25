@@ -24,8 +24,8 @@ const Hero = () => {
             fundaciones, distribución, eléctricos, sanitarios, mecánicos. Todo eso.
           </p>
           <div className="hero-buttons">
-            <button className="btn btn-primary">MÁS INFORMACIÓN</button>
-            <button className="btn btn-secondary">CONTACTANOS</button>
+            <a href="#Nosotros" className="btn btn-primary">MÁS INFORMACIÓN</a>
+            <a href="#Contacto" className="btn btn-secondary">CONTACTANOS</a>
           </div>
         </div>
         <div className="hero-image">
