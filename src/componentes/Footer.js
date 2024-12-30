@@ -1,24 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import axios from "axios";
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    asunto: "",
+    mensaje: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:3000/send-email", formData);
+      alert(response.data); // Mensaje de éxito
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+      alert("Error al enviar el correo. Por favor, intenta de nuevo.");
+    }
+  };
+
   return (
     <div className="container">
       {/* Formulario */}
       <div className="form-section">
-        <form>
+        <form action="https://formsubmit.co/iambatmanmfa@gmail.com" method="POST">
           <label htmlFor="nombre">NOMBRE</label>
-          <input type="text" id="nombre" placeholder="NOMBRE" required />
+          <input
+            type="text"
+            id="nombre"
+            placeholder="NOMBRE"
+            required
+            value={formData.nombre}
+          />
 
           <label htmlFor="email">TU EMAIL</label>
-          <input type="email" id="email" placeholder="TU EMAIL" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="TU EMAIL"
+            required
+            value={formData.email}
+          />
 
           <label htmlFor="asunto">ASUNTO</label>
-          <input type="text" id="asunto" placeholder="ASUNTO" required />
+          <input
+            type="text"
+            id="asunto"
+            placeholder="ASUNTO"
+            required
+            value={formData.asunto}
+          />
 
           <label htmlFor="mensaje">TU MENSAJE</label>
-          <textarea id="mensaje" rows="5" placeholder="TU MENSAJE"></textarea>
+          <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="TU MENSAJE"
+            required
+            value={formData.mensaje}
+          ></textarea>
 
           <button type="submit">
             ENVIAR <span>➤</span>
