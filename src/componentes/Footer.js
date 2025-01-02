@@ -1,6 +1,9 @@
-import react from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import axios from "axios";
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+
+const Footer = () => {
 
   return (
     <div className="container">
