@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="container">
       {/* Formulario */}
       <div className="form-section">
-        <form action="https://formsubmit.co/iambatmanmfa@gmail.com" method="POST">
+        <form action="https://formsubmit.co/4178a1baa2eaa929ebe7b52999d94b28" method="POST">
           <label htmlFor="nombre">NOMBRE</label>
           <input
             type="text"
