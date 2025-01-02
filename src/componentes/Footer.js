@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
-import axios from "axios";
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
@@ -11,7 +10,7 @@ const Footer = () => {
       <div className="form-section">
         <form action="https://formsubmit.co/4178a1baa2eaa929ebe7b52999d94b28" method="POST">
           {/*Honeypot*/}
-          <input type="text" name="_honey" style="display: none"/>
+          <input type="text" name="_honey" style={{display: 'none'}} />
 
           {/*Disable Captcha*/}
           <input type="hidden" name="_captcha" value="false"/>
