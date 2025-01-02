@@ -1,30 +1,6 @@
-import React, { useState } from "react";
+import react from "react";
 import "./Footer.css";
-import axios from "axios";
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
-
-const Footer = () => {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    asunto: "",
-    mensaje: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("http://localhost:3000/send-email", formData);
-      alert(response.data); // Mensaje de éxito
-    } catch (error) {
-      console.error("Error al enviar el correo:", error);
-      alert("Error al enviar el correo. Por favor, intenta de nuevo.");
-    }
-  };
 
   return (
     <div className="container">
@@ -37,7 +13,6 @@ const Footer = () => {
             id="nombre"
             placeholder="NOMBRE"
             required
-            value={formData.nombre}
           />
 
           <label htmlFor="email">TU EMAIL</label>
@@ -46,7 +21,6 @@ const Footer = () => {
             id="email"
             placeholder="TU EMAIL"
             required
-            value={formData.email}
           />
 
           <label htmlFor="asunto">ASUNTO</label>
@@ -55,7 +29,6 @@ const Footer = () => {
             id="asunto"
             placeholder="ASUNTO"
             required
-            value={formData.asunto}
           />
 
           <label htmlFor="mensaje">TU MENSAJE</label>
@@ -64,7 +37,6 @@ const Footer = () => {
             rows="5"
             placeholder="TU MENSAJE"
             required
-            value={formData.mensaje}
           ></textarea>
 
           <button type="submit">
