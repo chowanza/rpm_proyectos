@@ -15,14 +15,15 @@ const Footer = () => {
           {/*Disable Captcha*/}
           <input type="hidden" name="_captcha" value="false"/>
 
-          <input type="hidden" name="_next" value="/" />
+          {/*Redirect*/}
+          <input type="hidden" name="_next" value="https://rpmproyectos.vercel.app/" />
 
           <label htmlFor="nombre">NOMBRE</label>
           <input
             type="text"
             id="nombre"
             placeholder="NOMBRE"
-            name="Nombre"
+            name="name"
             required
           />
 
@@ -31,7 +32,7 @@ const Footer = () => {
             type="email"
             id="email"
             placeholder="TU EMAIL"
-            name="Email"
+            name="email"
             required
           />
 
@@ -40,7 +41,7 @@ const Footer = () => {
             type="text"
             id="asunto"
             placeholder="ASUNTO"
-            name="Asunto"
+            name="subject"
             required
           />
 
@@ -49,7 +50,7 @@ const Footer = () => {
             id="mensaje"
             rows="5"
             placeholder="TU MENSAJE"
-            name="Mensaje"
+            name="message"
             required
           ></textarea>
 
