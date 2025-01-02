@@ -10,12 +10,20 @@ const Footer = () => {
       {/* Formulario */}
       <div className="form-section">
         <form action="https://formsubmit.co/4178a1baa2eaa929ebe7b52999d94b28" method="POST">
+          {/*Honeypot*/}
+          <input type="text" name="_honey" style="display: none"/>
+
+          {/*Disable Captcha*/}
+          <input type="hidden" name="_captcha" value="false"/>
+
+          <input type="hidden" name="_next" value="/" />
+
           <label htmlFor="nombre">NOMBRE</label>
           <input
             type="text"
             id="nombre"
             placeholder="NOMBRE"
-            name="name"
+            name="Nombre"
             required
           />
 
@@ -24,7 +32,7 @@ const Footer = () => {
             type="email"
             id="email"
             placeholder="TU EMAIL"
-            name="email"
+            name="Email"
             required
           />
 
@@ -33,7 +41,7 @@ const Footer = () => {
             type="text"
             id="asunto"
             placeholder="ASUNTO"
-            name="subject"
+            name="Asunto"
             required
           />
 
@@ -42,7 +50,7 @@ const Footer = () => {
             id="mensaje"
             rows="5"
             placeholder="TU MENSAJE"
-            name="message"
+            name="Mensaje"
             required
           ></textarea>
 
