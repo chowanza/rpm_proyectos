@@ -15,6 +15,7 @@ const Footer = () => {
             type="text"
             id="nombre"
             placeholder="NOMBRE"
+            name="name"
             required
           />
 
@@ -23,6 +24,7 @@ const Footer = () => {
             type="email"
             id="email"
             placeholder="TU EMAIL"
+            name="email"
             required
           />
 
@@ -31,6 +33,7 @@ const Footer = () => {
             type="text"
             id="asunto"
             placeholder="ASUNTO"
+            name="subject"
             required
           />
 
@@ -39,6 +42,7 @@ const Footer = () => {
             id="mensaje"
             rows="5"
             placeholder="TU MENSAJE"
+            name="message"
             required
           ></textarea>
 
